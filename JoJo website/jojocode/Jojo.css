@@ -1,0 +1,295 @@
+/*CSS for JOJO page
+Daniel Andrew
+3/5/2024
+*
+/* Global styles for the document */
+
+body {
+  background-color: #EAEAEA; /* White background color */
+  color: #555555; /* Dark gray text color */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style rules for the header element */
+
+
+
+#wrapper {
+  /*elements inside wrapper are centered*/
+  margin: auto;
+  background-image: linear-gradient(to bottom, #FFFFFF, #BBBFC8);
+  background-color: #BBBFC8;
+  border: 1px solid #000033
+  }
+  
+header{
+  background-color: #A6AECC; /* Dark blue background color */
+  color: #080A15; /* Rich Black text color */
+  padding-top: 30px;
+  text-align: center;
+}
+header img {
+  width: 1px; 
+  float: left;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 10px;
+  
+}
+header a {
+  text-decoration: none;
+  color: #080A15;
+}
+
+header a:link {
+  color: #080A15;
+}
+
+header a:visited {
+  color: #080A15;
+}
+
+header a:hover {
+  color: #F3D67B;
+}
+
+/* Styles for the nav element */
+nav {
+  font-weight: bold;
+  font-size: 120%;
+  padding: 0; 
+  text-align: center;
+}
+
+nav a{
+  text-decoration: none;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+nav ul{
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+nav li{
+  border-bottom: 1px solid #A6AECC;
+}
+nav a:link{
+  color: #080A15
+}
+
+nav a:visited {
+  color: #344873;
+}
+nav a:hover{
+  color: #F3D67B;
+}
+main {
+  /*layout*/
+  padding: 1px 20px 20px 30px;
+  display: block;
+  overflow:auto;
+  /*style*/
+  background-color: #BBBFC8;
+}
+main ul{
+  list-style-image: url(logo.jpg);
+}
+
+h1{
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0.5em 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: 0.25em;
+}
+
+/* Styles for the h2 element */
+
+h2 {
+  color: #F3D67B; /* Medium blue text color */
+  font-family: Georgia, 'Times New Roman', serif;
+  text-shadow: 1px 1px 1px #cccccc;
+}
+
+h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #A8917F
+}
+
+
+h4 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #A8917F
+}
+
+form{
+  display: flex;
+  flex-flow: column nowrap;
+}
+input, textarea {
+  margin-bottom: .5em;
+}
+input{
+  padding: .5em;
+}
+/* Styles for the dt element */
+dt {
+  color: #080A15; 
+}
+footer {
+  
+  padding: 2em;
+  background-color: white;
+  /*text for the bottom*/
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 75%;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Styles for a class named resort */
+.resort {
+  color: #A8917F; /* Medium blue text color */
+  font-weight: bold;
+}
+
+#contact{
+  font-size: 90%;
+}
+
+#jojohome {
+  height: 300px;
+  width: auto;
+  background-image: url(jb.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#jon{
+  height: 300px;
+  background-image: url(Jonp.webp);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#jotaro {
+  height: 300px;
+  background-image: url(Jotp.avif);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+
+#allme {
+   height: 900px;
+  background-image: url(Me.JPG);
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+#joc{
+  height: 400px;
+  background-image: url(joc.webp);
+  background-size: 100% 100%;
+  width: 33.33%;
+  padding: 5px;
+
+}
+
+#joj{
+  height: 500px;
+  background-image: url(joj.webp);
+  background-size: 100% 100%;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.image-container {
+  text-align: center;
+  display: flex; /*flexbox to arrange images side by side */
+}
+
+.image-container img {
+  max-width: 100%; /* Make each image take up 50% of the container width */
+  height: 500px; /* Maintain aspect ratio */
+  text-align: center;
+}
+.container {
+  text-align: center; /* Center the content horizontally */
+}
+/****MEDIUM LAYOUT****/
+@media (min-width: 600px) {
+  nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0.25em;
+    justify-content: space-around;
+  }
+
+  nav li{
+    border-bottom: none;
+  }
+
+  section{
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+  }
+  #submit {
+    grid-column: 2/3;
+    width: 9em;
+  }
+  section{
+    margin: 0 2em;
+    flex: 1;
+  }
+  /***Creating a three column layout for out FAQ***/
+  .flow{
+    display: flex;
+    flex-direction: row;
+
+  }
+}
+/****MEDIUM LAYOUT****/
+@media (min-width:1024px){
+  #wrapper{
+    margin: auto;
+    width: 80%;
+    border: 1px solid #A6AECC;
+    box-shadow: 3px 3px 3px #A6AECC;
+  }
+  nav{
+    text-align: left;
+    padding-left: 1em;
+  }
+  @supports (display: grid){
+    nav ul{
+      flex-direction: column;
+    }
+
+    header{grid-area: header;}
+    nav{ grid-area: nav;}
+    .hero{grid-area: hero;}
+    main{grid-area:main;}
+    footer{grid-area:footer;}
+    #wrapper{
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      grid-template-rows: 100px auto 50px;
+      grid-template: "header header" 100px
+                            "nav hero" auto
+                            "nav main" auto
+                            "nav footer" 50px / 180px 1fr;
+    }
+  }
+}
