@@ -1,87 +1,75 @@
-<!-- Final Website
-Daniel Andrew
-3/5/2024-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>
- Jotaro vs Jonathan</title>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="Jojo.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Jotaro vs Jonathan</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="Jojo.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <div id="wrapper">
-   
-<header>
-  <h1><a href="index.html">Jotaro vs Jonathan</a></h1>
-</header>
-<nav id="menu">
-
-  <button class="hamburger">
+    <header>
+      <h1><a href="index.html">Jotaro vs Jonathan</a></h1>
+    </header>
+    <nav id="menu">
+      <button class="hamburger">
+        <!-- material icons https://material.io/resources/icons/ -->
+        <i class="menuIcon material-icons">menu</i>
+        <i class="closeIcon material-icons">close</i>
+      </button>
+      <ul class="menu">
+        <li class="menuItem"><a href="index.html">Home</a></li>
+        <li class="menuItem"><a href="Jonathan.html">Jonathan</a></li> 
+        <li class="menuItem"><a href="Jotaro.html">Jotaro</a></li>
+        <li class="menuItem"><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <div id="jotaro"></div>
+    <main id="main-content">
+      <h2>Jotaro Cujoh</h2>
+      <section>
+        <h3>Description</h3>
+        <p>Jotaro Cujoh makes his first appearance in part 3 of the series. In this part, they introduce "stands" for the first time, which is an astral projection of the user's fighting spirit. This creative direction by Hirohiko Araki helped significantly boost the series' popularity. Jotaro Cujoh's character is modeled after the famous Hollywood actor "Clint Eastwood", showcasing a no-nonsense personality and having the iconic phrase "Good grief" (やれやれだぜ, yare yare daze), making him the most favored protagonist among fans.</p>
+      </section>
+      <section>
+        <h3>Strengths</h3>
+        <p>Jotaro's story arc is not only the first to have Stands but also features an ensemble of characters that embark on a perilous journey together, higher stakes involved, and a full feeling that this show is really bizarre!</p>
+      </section>
+      <section>
+        <h3>Weaknesses</h3>
+        <p>While Jotaro, the character himself, does not possess many weaknesses in a writing sense, the story arc in part 3 goes on just a little too long with a "villain of the week" formula that is used too much. It is also not advisable to skip parts 1 and 2 before watching part 3 as much of the story and characters come from the events of the previous two parts.</p>
+      </section>
+    </main>
+    <footer>
+      <i><small>Copyright &copy; 2024 Jotaro vs. Jonathan<br>
+      <a href="mailto:dan2282958@maricopa.edu">dan2282958@maricopa.edu</a></small></i>
+    </footer>
+  </div>
+  <!-- Closing the wrapper div -->
+  <script> 
+    const menu = document.querySelector(".menu");
+    const menuItems = document.querySelectorAll(".menuItem");
+    const hamburger = document.querySelector(".hamburger");
+    const closeIcon = document.querySelector(".closeIcon");
+    const menuIcon = document.querySelector(".menuIcon");
     
-    <!-- material icons https://material.io/resources/icons/ -->
-    <i class="menuIcon material-icons">menu</i>
-    <i class="closeIcon material-icons">close</i>
-
-  <ul class="menu">
-    <li class="menuItem"><a href="index.html">Home</a></li>
-    <li class="menuItem"><a href="Jonathan.html">Jonathan</a></li> 
-    <li class="menuItem"><a href="Jotaro.html">Jotaro</a></li>
-    <li class="menuItem"><a href="about.html">About</a></li>
-  </ul>
-  
-  </button>
-</nav>
-
-<div id="jotaro">
-</div>
-
-<main>
-<h2>Jotaro Cujoh</h2>
-<section>
-  <h3>Description</h3>
-  <p>Jotaro Cujoh makes his first apperance in part 3 of the series. In this part they introduce "stands" for the first time which is an astral projection of the users fighting spirit. This creative direction by Hirohiko Araki helped significantly boost the series popularity. Jotaro Cujoh's character is modeled after the famous Hollywood actor "Clint Eastwood". Showcaseing a no nonsense personality and having the iconic phrase "Good grief" (やれやれだぜ, yare yare daze). Makes him a the most favored protagonist among fans. </p>
-</section>
-<section>
-  <h3>Strengths</h3>
-  <p>Jotaro's story arc is not only the fisrt to have Stands. It also features an ensemble of characters that embark on a perilous journey together, higher stakes involved and a full feeling that this show is really Bizzare!<p>
-</section>
-<section>
-   <h3>Weaknesses</h3>
-   <p>While Jotaro,the character himself, does not posseses many weaknesses in a writing sense. The story arc in part 3 goes on just alittle too long with a "villian of the week" formula that is used too much. It is also not advisable to skip part 1 and 2 before watching part 3 as much of the story and characters come from the events of the previous two parts.</p>
-</section>
-</main>
-
-<footer>
-<i><small>Copyright &copy; 2024 Jotaro vs. Jonathan<br>
-<a href="dan2282958@maricopa.edu">dan2282958@maricopa.edu</a></small></i>
-<script> 
-  const menu = document.querySelector(".menu");
-  const menuItems = document.querySelectorAll(".menuItem");
-  const hamburger = document.querySelector(".hamburger");
-  const closeIcon = document.querySelector(".closeIcon");
-  const menuIcon = document.querySelector(".menuIcon");
-  
-  function toggleMenu() {
-    if (menu.classList.contains("showMenu")) {
-      menu.classList.remove("showMenu");
-      closeIcon.style.display = "none";
-      menuIcon.style.display = "block";
-    } else {
-      menu.classList.add("showMenu");
-      closeIcon.style.display = "block";
-      menuIcon.style.display = "none";
+    function toggleMenu() {
+      if (menu.classList.contains("showMenu")) {
+        menu.classList.remove("showMenu");
+        closeIcon.style.display = "none";
+        menuIcon.style.display = "block";
+      } else {
+        menu.classList.add("showMenu");
+        closeIcon.style.display = "block";
+        menuIcon.style.display = "none";
+      }
     }
-  }
-  
-  hamburger.addEventListener("click", toggleMenu);
-  
-  menuItems.forEach(function(menuItem) {
-    menuItem.addEventListener("click", toggleMenu);
-  });
+    
+    hamburger.addEventListener("click", toggleMenu);
+    
+    menuItems.forEach(function(menuItem) {
+      menuItem.addEventListener("click", toggleMenu);
+    });
   </script>
-</footer>
-</div>
 </body>
 </html>
