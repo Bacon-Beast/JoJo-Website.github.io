@@ -1,94 +1,75 @@
-<!--About me page
-Daniel Andrew
-3/5/2024-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Jotaro vs Jonathan :: About me</title>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="Jojo.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<style>
-  img {
-      width: 300px; /* Adjust width */
-      height: auto; /* Let height adjust automatically to maintain aspect ratio */
-  }
-</style>
+  <title>Jotaro vs Jonathan :: About me</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="Jojo.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <div id="wrapper">
-<header>
-  <h1><a href="index.html">Jotaro vs Jonathan</a></h1>
-</header>
-<nav id="menu">
+    <header>
+      <h1><a href="index.html">Jotaro vs Jonathan</a></h1>
+    </header>
+    <nav id="menu">
+      <button class="hamburger">
+        <!-- material icons https://material.io/resources/icons/ -->
+        <i class="menuIcon material-icons">menu</i>
+        <i class="closeIcon material-icons">close</i>
+      </button>
+      <ul class="menu">
+        <li class="menuItem"><a href="index.html">Home</a></li>
+        <li class="menuItem"><a href="Jonathan.html">Jonathan</a></li> 
+        <li class="menuItem"><a href="Jotaro.html">Jotaro</a></li>
+        <li class="menuItem"><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <img src="Me.jpg" alt="Image">
+      </div>
+      <h2>Daniel Andrew</h2>
+      <section>
+        <h3>About me</h3>
+        <p>I am from Mesa, Arizona. I have my associates in arts from MCC. I have fun creating things online and most importantly I am a big fan of JoJo's Bizarre adventure!</p>
+      </section>
+      <section>
+        <h3>Contact me</h3>
+        <p>dan2282958@maricopa.edu</p>
+        <p>605–477–3018</p>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/daniel-andrew-a52204297/">Daniel Andrew</a></p>
+      </section>
+    </main>
+    <footer>
+      <i><small>Copyright &copy; 2024 Jotaro vs. Jonathan<br>
+      <a href="mailto:dan2282958@maricopa.edu">dan2282958@maricopa.edu</a></small></i>
+    </footer>
+  </div> <!-- Closing the wrapper div -->
 
-  <button class="hamburger">
+  <script> 
+    const menu = document.querySelector(".menu");
+    const menuItems = document.querySelectorAll(".menuItem");
+    const hamburger = document.querySelector(".hamburger");
+    const closeIcon = document.querySelector(".closeIcon");
+    const menuIcon = document.querySelector(".menuIcon");
     
-    <!-- material icons https://material.io/resources/icons/ -->
-    <i class="menuIcon material-icons">menu</i>
-    <i class="closeIcon material-icons">close</i>
-
-  <ul class="menu">
-    <li class="menuItem"><a href="index.html">Home</a></li>
-    <li class="menuItem"><a href="Jonathan.html">Jonathan</a></li> 
-    <li class="menuItem"><a href="Jotaro.html">Jotaro</a></li>
-    <li class="menuItem"><a href="about.html">About</a></li>
-  </ul>
-  
-  </button>
-</nav>
-
-<main>
-  <div class="container">
-    <img src="Me.jpg" alt="Image">
-  </div>
-
-  <h2>Daniel Andrew</h2>
-  <section>
-      <h3>About me</h3>
-      <p>I am from Mesa, Arizona. I have my associates in arts from MCC. I have fun creating things online and most importantly I am a big fan of JoJo's Bizarre adventure!</p>
-  </section>
-  <section>
-      <h3>Contact me</h3>
-      <p>dan2282958@maricopa.edu</p>
-      <p>605–477–3018</p>
-      <p>Linkedin: <a href="https://www.linkedin.com/in/daniel-andrew-a52204297/">Daniel Andrew</a></p>
-  </section>
-</main>
-
-<footer>
-  <i><small>Copyright &copy; 2024 Jotaro vs. Jonathan<br>
-  <a href="dan2282958@maricopa.edu">dan2282958@maricopa.edu</a></small></i>
-</footer>
-
-<script> 
-  const menu = document.querySelector(".menu");
-  const menuItems = document.querySelectorAll(".menuItem");
-  const hamburger = document.querySelector(".hamburger");
-  const closeIcon = document.querySelector(".closeIcon");
-  const menuIcon = document.querySelector(".menuIcon");
-  
-  function toggleMenu() {
-    if (menu.classList.contains("showMenu")) {
-      menu.classList.remove("showMenu");
-      closeIcon.style.display = "none";
-      menuIcon.style.display = "block";
-    } else {
-      menu.classList.add("showMenu");
-      closeIcon.style.display = "block";
-      menuIcon.style.display = "none";
+    function toggleMenu() {
+      if (menu.classList.contains("showMenu")) {
+        menu.classList.remove("showMenu");
+        closeIcon.style.display = "none";
+        menuIcon.style.display = "block";
+      } else {
+        menu.classList.add("showMenu");
+        closeIcon.style.display = "block";
+        menuIcon.style.display = "none";
+      }
     }
-  }
-  
-  hamburger.addEventListener("click", toggleMenu);
-  
-  menuItems.forEach(function(menuItem) {
-    menuItem.addEventListener("click", toggleMenu);
-  });
+    
+    hamburger.addEventListener("click", toggleMenu);
+    
+    menuItems.forEach(function(menuItem) {
+      menuItem.addEventListener("click", toggleMenu);
+    });
   </script>
-
-</div> <!-- Closing the wrapper div -->
-
 </body>
 </html>
