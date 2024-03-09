@@ -8,19 +8,30 @@ Daniel Andrew
 <title>Jotaro vs Jonathan :: Jonathan</title>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="Jojo.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <div id="wrapper">
 <header>
-  <h1><a href="./index.html">Jotaro vs Jonathan</a></h1>
+  <h1><a href="index.html">Jotaro vs Jonathan</a></h1>
 </header>
-<nav>
-  <ul>
-     <li><a href="./index.html">Home</a></li>
-     <li><a href="Jonathan.html">Jonathan</a></li> 
-     <li><a href="Jotaro.html">Jotaro</a></li>
-     <li><a href="about.html">About</a></li>
+
+<nav id="menu">
+
+  <button class="hamburger">
+    
+    <!-- material icons https://material.io/resources/icons/ -->
+    <i class="menuIcon material-icons">menu</i>
+    <i class="closeIcon material-icons">close</i>
+
+  <ul class="menu">
+    <li class="menuItem"><a href="index.html">Home</a></li>
+    <li class="menuItem"><a href="Jonathan.html">Jonathan</a></li> 
+    <li class="menuItem"><a href="Jotaro.html">Jotaro</a></li>
+    <li class="menuItem"><a href="about.html">About</a></li>
   </ul>
+  
+  </button>
 </nav>
 
 <div id="jon">
@@ -48,6 +59,31 @@ Daniel Andrew
 <footer>
 <i><small>Copyright &copy; 2024 Jotaro vs. Jonathan<br>
 <a href="dan2282958@maricopa.edu">dan2282958@maricopa.edu</a></small></i>
+<script> 
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger = document.querySelector(".hamburger");
+const closeIcon = document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach(function(menuItem) {
+  menuItem.addEventListener("click", toggleMenu);
+});
+</script>
 </footer>
 </div>
 </body>
